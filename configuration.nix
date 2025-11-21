@@ -121,6 +121,8 @@
     git
     nixfmt-rfc-style
     ripgrep
+    unzip
+    wget
   ];
 
   fonts.packages = with pkgs; [

@@ -17,7 +17,9 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
+  home.packages = with pkgs; [
+    nixd
+    rustup
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
@@ -49,6 +51,12 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
+
+    nvim = {
+      source = ./nvim;
+      target = ".config/nvim";
+      recursive = true;
+    };
   };
 
   # Home Manager can also manage your environment variables through
@@ -73,4 +81,6 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  programs.bash.enable = true;
 }
