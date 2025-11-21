@@ -1,6 +1,9 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
+  imports = [
+    ./shell/shell.nix
+  ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "igneous";
@@ -28,20 +31,5 @@
       target = ".config/nvim";
       recursive = true;
     };
-  };
-
-  home.sessionVariables = {
-    EDITOR = "nvim";
-  };
-
-  programs.bash = {
-    enable = true;
-    historyFile = ".bashhistfile";
-    historyIgnore = [ "ls" "cd" "exit" ];
-  };
-  home.shellAliases = {
-    clstat = "clear && git status";
-    gpl = "git pull";
-    vim = "nvim";
   };
 }
