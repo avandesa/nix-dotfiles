@@ -58,6 +58,26 @@
     variant = "";
   };
 
+  # Enable OpenGL
+  hardware.graphics.enable = true;
+
+  # Load NVIDIA drivers
+  services.xserver.videoDrivers = [ "nvidia" ];
+
+  hardware.nvidia = {
+    # Required
+    modesetting.enable = true;
+
+    # Disable open-source kernel module, 1070 not compatible
+    open = false;
+
+    # Enable the settings menu via `nvidia-settings`
+    nvidiaSettings = true;
+
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
+
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
@@ -119,6 +139,7 @@
     clang
     fd
     git
+    gnumake
     nixfmt-rfc-style
     ripgrep
     unzip
