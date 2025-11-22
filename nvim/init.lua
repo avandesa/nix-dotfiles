@@ -880,7 +880,19 @@ require('lazy').setup({
       signature = { enabled = true },
     },
   },
-
+  
+  {
+    'adisen99/apprentice.nvim',
+    priority = 1000,
+    dependencies = {
+      { 'rktjmp/lush.nvim' },
+    },
+    config = function()
+      require('apprentice').setup {}
+      vim.cmd.colorscheme 'apprentice'
+    end,
+  },
+  --[[
   { -- You can easily change to a different colorscheme.
     -- Change the name of the colorscheme plugin below, and then
     -- change the command in the config to whatever the name of that colorscheme is.
@@ -902,6 +914,7 @@ require('lazy').setup({
       vim.cmd.colorscheme 'tokyonight-night'
     end,
   },
+  --]]
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
