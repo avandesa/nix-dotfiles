@@ -143,6 +143,10 @@
 
   security.polkit.enable = true;
 
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [
+    "1password"
+    "1password-cli"
+  ];
   programs._1password = { enable = true; };
   programs._1password-gui = {
     enable = true;
