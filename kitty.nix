@@ -7,7 +7,8 @@
 
     themeFile = "Apprentice";
     settings = {
-      font_family = "iosevka extended";
+      # font_family = "Berkeley Mono";
+      font_family = "family='Berkeley Mono' postscript_name=BerkeleyMono-Regular";
       cursor_trail = 1;
 
       scrollbar = "hovered";

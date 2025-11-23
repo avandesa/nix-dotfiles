@@ -163,7 +163,7 @@
     nerd-fonts.iosevka
   ];
   fonts.fontconfig.defaultFonts = {
-    monospace = [ "iosevka" ];
+    monospace = [ "Berkeley Mono" "iosevka" ];
   };
 
   # Lets zsh completions work
