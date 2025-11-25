@@ -892,16 +892,14 @@ require('lazy').setup({
       signature = { enabled = true },
     },
   },
-  
+
   {
-    'adisen99/apprentice.nvim',
+    'catppuccin/nvim',
+    name = 'catppuccin',
     priority = 1000,
-    dependencies = {
-      { 'rktjmp/lush.nvim' },
-    },
     config = function()
-      require('apprentice').setup {}
-      vim.cmd.colorscheme 'apprentice'
+      require('catppuccin').setup {}
+      vim.cmd.colorscheme 'catppuccin-frappe'
     end,
   },
   --[[

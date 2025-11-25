@@ -5,7 +5,7 @@
     enable = true;
     enableGitIntegration = true;
 
-    themeFile = "Apprentice";
+    themeFile = "Catppuccin-Frappe";
     settings = {
       # font_family = "Berkeley Mono";
       font_family = "family='Berkeley Mono' postscript_name=BerkeleyMono-Regular";
