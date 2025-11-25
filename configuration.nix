@@ -1,10 +1,11 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-{ config
-, pkgs
-, hyprland
-, ...
+{
+  config,
+  pkgs,
+  hyprland,
+  ...
 }:
 {
   imports = [
@@ -63,7 +64,6 @@
     wayland.enable = true;
   };
 
-
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
@@ -88,7 +88,6 @@
 
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
-
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -163,7 +162,10 @@
     nerd-fonts.iosevka
   ];
   fonts.fontconfig.defaultFonts = {
-    monospace = [ "Berkeley Mono" "iosevka" ];
+    monospace = [
+      "Berkeley Mono"
+      "iosevka"
+    ];
   };
 
   # Lets zsh completions work
@@ -177,11 +179,15 @@
 
   security.polkit.enable = true;
 
-  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [
-    "1password"
-    "1password-cli"
-  ];
-  programs._1password = { enable = true; };
+  nixpkgs.config.allowUnfreePredicate =
+    pkg:
+    builtins.elem (pkgs.lib.getName pkg) [
+      "1password"
+      "1password-cli"
+    ];
+  programs._1password = {
+    enable = true;
+  };
   programs._1password-gui = {
     enable = true;
     polkitPolicyOwners = [ "igneous" ];

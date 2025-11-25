@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 {
   programs.ssh = {
     enable = true;
@@ -18,4 +23,3 @@
     };
   };
 }
-

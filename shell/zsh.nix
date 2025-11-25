@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 let
   completions = builtins.readFile ./completions.zsh;
   keybindings = builtins.readFile ./keybindings.zsh;

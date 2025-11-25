@@ -4,6 +4,7 @@
   inputs = {
     # Specify the source of Home Manager and Nixpkgs.
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -12,11 +13,21 @@
       url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     _1password-shell-plugins.url = "github:1Password/shell-plugins";
   };
 
   outputs =
-    inputs@{ nixpkgs, home-manager, hyprland, ... }:
+    inputs@{
+      nixpkgs,
+      home-manager,
+      hyprland,
+      nixvim,
+      ...
+    }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -39,6 +50,7 @@
         # the path to your home.nix.
         modules = [
           ./home.nix
+          nixvim.homeModules.nixvim
           op-shell.hmModules.default
         ];
 
