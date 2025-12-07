@@ -164,6 +164,12 @@ in
       rustCmd = "codeAction";
     })
     (mkRustKeymap {
+      desc = "Open Rust code actions";
+      mode = "v";
+      key = "<leader>ra";
+      rustCmd = "codeAction";
+    })
+    (mkRustKeymap {
       desc = "Next Rust Diagnostic";
       key = "<leader>rd";
       rustCmd = "renderDiagnostic";
