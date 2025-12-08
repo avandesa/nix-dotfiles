@@ -151,6 +151,7 @@
     fd
     git
     gnumake
+    htop
     nixfmt-rfc-style
     ripgrep
     unzip

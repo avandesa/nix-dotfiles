@@ -44,6 +44,7 @@
     man-pages
     man-pages-posix
     nixd
+    prismlauncher
     rustup
     tree
     zathura
