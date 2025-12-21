@@ -41,6 +41,7 @@
   home.packages = with pkgs; [
     cargo-expand
     glibcInfo
+    imagemagick
     man-pages
     man-pages-posix
     nixd
