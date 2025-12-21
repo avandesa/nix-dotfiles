@@ -40,6 +40,7 @@
 
   home.packages = with pkgs; [
     cargo-expand
+    dig
     glibcInfo
     imagemagick
     man-pages
@@ -47,6 +48,7 @@
     nixd
     prismlauncher
     rustup
+    thunderbird
     tree
     zathura
   ];
