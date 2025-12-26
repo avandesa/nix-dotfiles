@@ -39,6 +39,7 @@
     ];
 
   home.packages = with pkgs; [
+    cargo-deny
     cargo-expand
     dig
     glibcInfo

@@ -153,6 +153,7 @@
     gnumake
     htop
     nixfmt-rfc-style
+    openssl
     ripgrep
     unzip
     wget
