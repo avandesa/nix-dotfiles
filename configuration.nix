@@ -186,7 +186,14 @@
     builtins.elem (pkgs.lib.getName pkg) [
       "1password"
       "1password-cli"
+      "steam"
+      "steam-original"
+      "steam-unwrapped"
+      "steam-run"
     ];
+  programs.steam = {
+    enable = true;
+  };
   programs._1password = {
     enable = true;
   };
