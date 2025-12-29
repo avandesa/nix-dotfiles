@@ -95,8 +95,8 @@
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload = [ "~/Pictures/nomo.jpg" ];
-      wallpaper = [ "HDMI-A-2,~/Pictures/nomo.jpg" ];
+      preload = [ "~/Pictures/nomo2.jpg" ];
+      wallpaper = [ "HDMI-A-2,~/Pictures/nomo2.jpg" ];
     };
   };
 
