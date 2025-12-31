@@ -39,8 +39,6 @@
     ];
 
   home.packages = with pkgs; [
-    cargo-deny
-    cargo-expand
     dig
     glibcInfo
     imagemagick
@@ -48,7 +46,6 @@
     man-pages-posix
     nixd
     prismlauncher
-    rustup
     thunderbird
     tree
     zathura
