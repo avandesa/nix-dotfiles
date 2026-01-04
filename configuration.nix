@@ -152,6 +152,7 @@
     pavucontrol
     ripgrep
     unzip
+    usbutils
     wget
   ];
 
